@@ -1,0 +1,216 @@
+/*== GENERAL STYLES ==*/
+.top-header {
+    width: 100%;
+    font-size: 15pt;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    transition: all 0.1s linear;
+}
+
+.top-header #logo,
+.top-header #logo a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24pt;
+    text-decoration: none;
+    letter-spacing: 4pt;
+}
+
+ul#main-menu li {
+    list-style: none;
+    display: inline;
+    margin-right: 12px;
+}
+
+ul#main-menu li:last-of-type {
+    margin-right: 0;
+}
+
+
+/*== DEFAULT STYLE, USED WHEN ON BANNER ==*/
+
+.top-header-default,
+.top-header-default a,
+.top-header-default ul#main-menu,
+.top-header-default ul#main-menu li,
+.top-header-default ul#main-menu li a {
+    color: #fafafa;
+}
+
+.top-header-default {
+    background-color: transparent;
+    height: 80px;
+    border-bottom: none;
+}
+
+
+/*== LIGHT SCHEME ==*/
+
+.top-header-light,
+.top-header-light a,
+.top-header-light ul#main-menu,
+.top-header-light ul#main-menu li,
+.top-header-light ul#main-menu li a {
+    color: #555;
+}
+
+.top-header-light a:hover,
+.top-header-light ul#main-menu li a:hover {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.top-header-light {
+    background-color: #fafafa;
+    height: 60px;
+    font-size: 13pt;
+    border-bottom: 1px solid #e6e6e6;
+    -webkit-box-shadow: 0 0 15px 0  rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+    -box-shadow: 0 0 15px 0  rgba(0,0,0,0.15);
+}
+
+/*!
+ * Hamburgers
+   Thanks to Jonathan Suh @jonsuh
+   https://jonsuh.com/hamburgers
+   https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+    padding: 0 20px;
+    display: none;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #000; }
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative; }
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+
+.hamburger-inner::before {
+    top: -10px; }
+
+.hamburger-inner::after {
+    bottom: -10px; }
+
+.hamburger--slider .hamburger-inner {
+    top: 2px; }
+.hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; }
+.hamburger--slider .hamburger-inner::after {
+    top: 20px; }
+
+.hamburger--slider.is-active .hamburger-inner {
+    background-color: #555;
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+.hamburger--slider.is-active .hamburger-inner::before {
+    background-color: #555;
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; }
+.hamburger--slider.is-active .hamburger-inner::after {
+    background-color: #555;
+    transform: translate3d(0, -20px, 0) rotate(-90deg); }
+
+.top-header .hamburger-inner,
+.top-header .hamburger-inner::before,
+.top-header .hamburger-inner::after {
+    background-color: #555;
+}
+
+
+
+
+
+@media screen and (max-width: 870px) {
+
+    #banner {height: 200px;}
+
+    .top-header-default,
+    .top-header-default a,
+    .top-header-default ul#main-menu,
+    .top-header-default ul#main-menu li,
+    .top-header-default ul#main-menu li a {
+        color: #555;
+    }
+
+    .top-header {height: auto; padding: 0 20px;}
+    .top-header #logo { width: 100%; padding: 20px; font-size: 20px; text-align: left;}
+
+    #top-menu {position: fixed; top:-100%; transition: top 0.75s ease; width: 100%; margin: 0 0 0 -20px; background-color: #fafafa;}
+
+    .top-header-default {background-color: #fafafa;}
+    ul#main-menu li {display: block; width: 100%;}
+    ul#main-menu li:last-of-type {border-bottom: none;}
+    ul#main-menu li a {margin: 0; padding: 0;}
+
+    .top-header-default,
+    .top-header-light {
+        height: auto;
+        font-size: 13pt;
+    }
+
+    .top-header-default ul#main-menu,
+    .top-header-light ul#main-menu {
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .top-header-default ul#main-menu li,
+    .top-header-light ul#main-menu li {
+        padding: 20px 0;
+        border-bottom: 1px solid #d6d6d6;
+        text-align: center;
+    }
+
+    .top-header-default ul#main-menu li:last-child,
+    .top-header-light ul#main-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-active {top:79px!important;}
+    .hamburger {display: inline-block;}
+}
