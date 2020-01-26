@@ -21,3 +21,11 @@
 * Если ID сменен, то в файле theader.js указать новый ID хэдера.
 
 * Настроить стили как требуется.
+
+##Скриншоты
+
+![Светлое меню на десктопе](https://raw.githubusercontent.com/taviskaron/t-fixed-menu/master/img/screenshot1.jpg)
+
+![Светлое меню на десктопе](https://raw.githubusercontent.com/taviskaron/t-fixed-menu/master/img/screenshot2.jpg)
+
+![Светлое меню на мобильном устройстве](https://raw.githubusercontent.com/taviskaron/t-fixed-menu/master/img/screenshot3.jpg)
