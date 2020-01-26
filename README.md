@@ -22,6 +22,7 @@
 
 * Настроить стили как требуется.
 
+----
 ##Скриншоты
 
 ![Светлое меню на десктопе](https://raw.githubusercontent.com/taviskaron/t-fixed-menu/master/img/screenshot1.jpg)
